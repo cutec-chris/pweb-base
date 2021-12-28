@@ -1,5 +1,7 @@
 import { FASTElement, customElement } from 'https://unpkg.com/@microsoft/fast-element';
+import { } from 'https://unpkg.com/@fluentui/web-components';
 export function registerComponents() {
+    showSplash();
 }
 export function Init() {
     showSplash();
