@@ -1,9 +1,16 @@
 import { FASTElement, customElement, html, css } from 'https://unpkg.com/@microsoft/fast-element';
 import { } from 'https://unpkg.com/@fluentui/web-components';
 const NavBar_template = html`
-<fluent-tree-view></fluent-tree-view>
+<div id="NavBar_container">
+    <fluent-tree-view></fluent-tree-view>
+</div>
 `;
-const NavBar_styles = css``;
+const NavBar_styles = css`
+NavBar_container {
+    height: "100%",
+    width: 300px
+}
+`;
 export class NavBar extends FASTElement {
     static definition = {
         name: 'promet-navbar',
@@ -14,8 +21,6 @@ export class NavBar extends FASTElement {
 FASTElement.define(NavBar);
 export function Init() {
     showSplash();
-    let nav = document.createElement('promet-navbar');
-    document.body.appendChild(nav);
 }
 function showSplash() {
     //show Splash screen

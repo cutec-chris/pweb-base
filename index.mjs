@@ -1,5 +1,7 @@
 function doInit() {
     Screen.Init();
+    let nav = document.createElement('promet-navbar');
+    document.body.appendChild(nav);
 }
 function isVrSupported() {
     //return true;
