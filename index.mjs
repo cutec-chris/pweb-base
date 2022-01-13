@@ -1,6 +1,5 @@
 function doInit() {
     Screen.Init();
-    Screen.registerComponents();
 }
 function isVrSupported() {
     //return true;

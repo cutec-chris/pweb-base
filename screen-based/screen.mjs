@@ -1,10 +1,21 @@
-import { FASTElement, customElement } from 'https://unpkg.com/@microsoft/fast-element';
+import { FASTElement, customElement, html, css } from 'https://unpkg.com/@microsoft/fast-element';
 import { } from 'https://unpkg.com/@fluentui/web-components';
-export function registerComponents() {
-    showSplash();
+const NavBar_template = html`
+<fluent-tree-view></fluent-tree-view>
+`;
+const NavBar_styles = css``;
+export class NavBar extends FASTElement {
+    static definition = {
+        name: 'promet-navbar',
+        template: NavBar_template,
+        styles: NavBar_styles
+    };
 }
+FASTElement.define(NavBar);
 export function Init() {
     showSplash();
+    let nav = document.createElement('promet-navbar');
+    document.body.appendChild(nav);
 }
 function showSplash() {
     //show Splash screen
