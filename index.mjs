@@ -1,6 +1,9 @@
+export function registerPage(aName,aInitFunction) {
+}
 function doInit() {
     Screen.Init();
     let nav = document.createElement('promet-navbar');
+    nav.id = 'NavBar';
     document.body.appendChild(nav);
     window.hideSplash();
 }
