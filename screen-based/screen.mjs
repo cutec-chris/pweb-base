@@ -20,7 +20,9 @@ export class NavBar extends FASTElement {
     };
     addLink(id,name,target) {
         let newItem = document.createElement('fluent-tree-item');
-        
+        let rootElem = this.shadowRoot.getElementById('NavBar_container');
+        rootElem.children[0].appendChild(newItem);
+        newItem.innerText = name;
     }
 }
 FASTElement.define(NavBar);

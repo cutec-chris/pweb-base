@@ -1,3 +1,3 @@
 import { registerPage } from './index.mjs'
-registerPage('Order',function(){
+registerPage('order','Orders',function(){
 })
