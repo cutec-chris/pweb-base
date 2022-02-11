@@ -3,7 +3,6 @@ import { } from 'https://unpkg.com/@fluentui/web-components';
 const NavBar_template = html`
 <div id="NavBar_container">
     <fluent-tree-view>
-        <fluent-tree-item>test</fluent-tree-item>
     </fluent-tree-view>
 </div>
 `;
@@ -19,6 +18,10 @@ export class NavBar extends FASTElement {
         template: NavBar_template,
         styles: NavBar_styles
     };
+    addLink(id,name,target) {
+        let newItem = document.createElement('fluent-tree-item');
+        
+    }
 }
 FASTElement.define(NavBar);
 export function Init() {
