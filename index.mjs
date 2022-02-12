@@ -1,5 +1,5 @@
 function isVrSupported() {
-    if (document.body.hasAttribute('xr')) {
+    if (document.body.hasAttribute('3d')) {
         return true;
     }
     //return true;
