@@ -1,4 +1,7 @@
 function isVrSupported() {
+    if (document.body.hasAttribute('xr')) {
+        return true;
+    }
     //return true;
     const supportsVR = 'getVRDisplays' in navigator;
     if (supportsVR) {
@@ -20,7 +23,7 @@ let Screen = null;
 const isInitialized = new Promise(function(resolve, reject) {
     let ScreenModule = './screen-based/screen.mjs';
     if (isVrSupported()) {
-        let ScreenModule = './xr-based/screen.mjs'
+        ScreenModule = './xr-based/screen.mjs'
     }
     import(ScreenModule).then(module => {
         Screen = module;
