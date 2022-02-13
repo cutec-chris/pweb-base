@@ -11,6 +11,7 @@ function isVrSupported() {
         }
     return false;
 }
+const InitDone = new Event('promet-loaded');
 export function registerPage(aId,aName,aInitFunction) {
     isInitialized.then((resolvedValue) => {
         let NavBar = document.getElementById('NavBar');
@@ -34,6 +35,7 @@ const isInitialized = new Promise(function(resolve, reject) {
     let nav = document.createElement('promet-navbar');
     nav.id = 'NavBar';
     document.body.appendChild(nav);
+    document.dispatchEvent(InitDone)
     window.hideSplash();
     console.log('Init complete');
     return result;

@@ -13,8 +13,9 @@ export function Init() {
     Scene.appendChild(Viewer);
     Camera = document.createElement('a-entity');
     Viewer.appendChild(Camera);
-    Camera.setAttribute('position','0 1.9 0')
+    Camera.setAttribute('position','0 1.9 -4')
     Camera.setAttribute('camera','')
     Camera.setAttribute('look-contols','')
-    Camera.setAttribute('wasd-contols','')
+    Viewer.setAttribute('wasd-contols','')
+    document.Scene = Scene;
 }
