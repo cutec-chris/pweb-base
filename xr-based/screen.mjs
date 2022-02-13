@@ -1,4 +1,4 @@
-import 'https://aframe.io/releases/1.2.0/aframe.min.js';
+import 'https://aframe.io/releases/1.3.0/aframe.min.js';
 AFRAME.registerComponent('promet-navbar', {
     init: function () {
     },
@@ -11,10 +11,10 @@ export function Init() {
     document.body.appendChild(Scene);
     Viewer = document.createElement('a-entity');
     Scene.appendChild(Viewer);
-    Camera = document.createElement('a-entity');
+    Camera = document.createElement('a-camera');
+    Viewer.setAttribute('position','0 0 0')
     Viewer.appendChild(Camera);
-    Camera.setAttribute('position','0 1.9 -4')
-    Camera.setAttribute('camera','')
+    Camera.setAttribute('position','0 1.9 0')
     Camera.setAttribute('look-contols','')
     Viewer.setAttribute('wasd-contols','')
     document.Scene = Scene;
