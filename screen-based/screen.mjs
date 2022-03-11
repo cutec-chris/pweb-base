@@ -12,6 +12,16 @@ const NavBar_styles = css`
     width: 300px;
 }
 `;
+const Tabs_template = html`
+<div>
+    <fluent-tab-view>
+    </fluent-tab-view>
+</div>
+`;
+const Tabs_styles = css`
+#Tabs_container {
+}
+`;
 export class NavBar extends FASTElement {
     static definition = {
         name: 'promet-navbar',
